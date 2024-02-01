@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Week4: responsive imgs</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>rsponsive imgs</h1>
+        <section>
+            <h2>same img diffrent size</h2>
+            <!-- <img src="https://placehold.co/400x400" alt=""> -->
+            <img srcset="
+        https://placehold.co/320x320 320w,
+        https://placehold.co/640x400 640px, 
+        https://placehold.co/1024x600 1024w," sizes="
+        (max-width: 320px) 320px,
+        (max-width: 640px) 640px,
+        (max-width: 1024px) 1024px" src="https://placehold.co/640x400" alt="placehold">
+        </section>
+        <section>
+            <h2>same size diffrent resolution</h2>
+            <img srcset="
+            https://placehold.co/320x320,
+            https://placehold.co/640x640 x2,
+            https://placehold.co/960x960 x3" src="https://placehold.co/320x320" alt="placeholder">
+        </section>
+        <section>
+            <h2>art direction</h2>
+            <picture>
+                <source srcset="images/fall-dog-1200.jpg
+                images/fall-dog-2400.jpg x2" media="
+                (min-width:900px)" />
+                <source srcset="images/fall-dog-900.jpg 
+                images/fall-dog-1800.jpg x2" media="
+                (min-width:640px)" /> 
+                <source srcset="images/fall-dog-640.jpg" media="
+                (min-width:320px)" />
+                <img src="images/fall-dog-900.jpg" alt="dog sitting on sofa" />
+
+            </picture>
+        </section>
+    </div>
+    <script>
+        console.log("i am here");
+        let x =5;
+        if(x==10){
+             console.log(i am here 10)
+        }
+    </script>
+</body>
+
+</html>
